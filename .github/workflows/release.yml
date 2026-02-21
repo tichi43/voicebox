@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - platform: "windows-latest"
+          - platform: "self-hosted"
             args: ""
             python-version: "3.12"
             backend: "pytorch"
