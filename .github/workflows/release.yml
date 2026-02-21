@@ -39,7 +39,7 @@ jobs:
           pip install -r backend/requirements.txt
 
       - name: Build Python server (Windows)
-        shell: bash
+        shell: powershell
         run: |
           cd backend
           python build_binary.py
