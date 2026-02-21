@@ -44,15 +44,12 @@ jobs:
           cd backend
           python build_binary.py
 
-          # Get platform tuple
-          PLATFORM=$(rustc --print host-tuple)
 
           # Create binaries directory
           mkdir -p ../tauri/src-tauri/binaries
 
           # Copy with platform suffix
-          cp dist/voicebox-server.exe ../tauri/src-tauri/binaries/voicebox-server-${PLATFORM}.exe
-          echo "Built voicebox-server-${PLATFORM}.exe"
+          cp dist/voicebox-server.exe ../tauri/src-tauri/binaries/voicebox-server-x86_64-pc-windows-msvc.exe
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
